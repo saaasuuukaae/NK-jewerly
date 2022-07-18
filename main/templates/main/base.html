@@ -1,0 +1,101 @@
+{% load static i18n %}
+<!doctype html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Наталья Каретный</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
+    {% block static %}
+
+    {% endblock %}
+</head>
+<body>
+
+<div class="wrapper" id="top" style="">
+    <header class="header">
+
+        <div class="container">
+            <div class="header__body {% if LANGUAGE_CODE|lower == 'he' %}reverse{% endif %}">
+                <div class="header__logo" >
+                    <h1><a href="#top" class="{% if LANGUAGE_CODE|lower == 'he' %}reverse-text{% endif %}">{% trans 'Natalia karetniy' %}</a></h1>
+                </div>
+                <ul class="header__nav {% if LANGUAGE_CODE|lower == 'he' %}reverse{% endif %}">
+                    <li class="header__item">
+                        <a href="#about" class="header__link {% if LANGUAGE_CODE|lower == 'he' %}reverse-text{% endif %}">
+                            {% trans 'About me' %}
+                        </a> <!-- type: ignore -->
+                    </li>
+                    <li class="header__item">
+                        <a href="#gallery" class="header__link {% if LANGUAGE_CODE|lower == 'he' %}reverse-text{% endif %}"> <!-- type: ignore -->
+                            {% trans 'Gallery' %}
+                        </a>
+                    </li>
+                    <li class="header__item">
+
+                        <label for="" class="header__link"></label>
+                        <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="/">
+                            <select name="language" class="normal-select-1" placeholder-text='{% trans "Change language" %}'>
+                                {% for l in languages %}
+                                    <option
+                                            value="{{ l.code|lower }}"
+                                            class="select-dropdown__list-item"
+                                            {% if l.code|lower == LANGUAGE_CODE|lower %}
+                                            selected
+                                            {% endif %}
+                                    >
+                                        {{ l.name_local }} ({{ l.code }})
+                                    </option>
+                                {% endfor %}
+                                {#                                <option value="en">En - English</option>#}
+                            </select>
+                            <input type="submit" value="Go">
+                        </form>
+                        {#                        <label class="header__link">#}
+                        {##}
+                        {#                            <select id="normal-select-1" placeholder-text="{{ LANGUAGE_CODE }}">#}
+                        {#                                {% get_language_info_list for LANGUAGES as languages %}#}
+                        {#                                {% for language in languages %}#}
+                        {#                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>#}
+                        {#                                        {{ language.name_local }} ({{ language.code }})#}
+                        {#                                    </option>#}
+                        {#                                {% endfor %}#}
+                        {#    <option value="1" class="select-dropdown__list-item">Item 1</option>#}
+                        {#    <option value="2" class="select-dropdown__list-item">Item 2</option>#}
+                        {#    <option value="3" class="select-dropdown__list-item">Item 3</option>#}
+                        {#    <option value="4" class="select-dropdown__list-item">Item 4</option>#}
+                        {#                            </select>#}
+                        {#                        </label>#}
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main">
+        {% block main %}
+
+        {% endblock %}
+    </main>
+
+    <footer class="footer"></footer>
+</div>
+
+<script src="{% static 'js-prod/main-production.js' %}" defer></script>
+<script src="{% static 'js-prod/dropDown-production.js' %}" defer></script>
+{% block scripts %}
+
+{% endblock %}
+
+</body>
+</html>

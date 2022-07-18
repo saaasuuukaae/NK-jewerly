@@ -1,0 +1,267 @@
+$header-height: 8vh;
+
+:root {
+  --header-bg: trasparent;
+
+  --logo-color: #fff;
+  --buttons-color: rgba(255, 255, 255);
+  --buttons-color-hover: rgb(183, 183, 183);
+
+
+}
+
+.header {
+  min-height: 75.52px;
+  display: block;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: var(--header-bg);
+  }
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: $header-height;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 4;
+
+    h1 {
+      cursor: pointer;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 45px;
+
+      a {
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        color: var(--logo-color);
+
+      }
+    }
+  }
+}
+
+.header.nav-scrolled {
+  --header-bg: #f4f4f4;
+
+  --logo-color: #333;
+  --buttons-color: #333;
+  --buttons-color-hover: #454242;
+
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.22);
+}
+
+.header {
+  &__nav {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    gap: 45px;
+  }
+
+  &__item {
+    >.header__link {
+      transition: all 0.3s ease !important;
+      font-weight: 400;
+      color: var(--buttons-color);
+      font-family: "Poppins", sans-serif;
+      font-size: 30px;
+
+
+    }
+
+    &:hover {
+      a {
+        color: var(--buttons-color-hover);
+
+      }
+    }
+  }
+}
+
+// ============================ MAIN SECTION =============================
+
+.intro {
+
+  &__body {
+    padding-top: 220px;
+  }
+
+  &__title {
+    font-family: 'Playfair Display', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 95px;
+    max-width: 800px;
+    color: #fff;
+  }
+
+  &__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 45px;
+    color: #fff;
+    margin-top: 50px;
+  }
+
+  &__button {
+    transition: all .3s;
+    background: #3A89E6;
+    border-radius: 38px;
+    width: 307px;
+    height: 75px;
+    position: relative;
+    margin: 70px 0 85px 0;
+
+
+    a {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #E5FAF6;
+
+    }
+
+    &:hover {
+      filter: brightness(1.2);
+
+      a {
+
+        filter: brightness(1);
+        color: #f4f4f4;
+      }
+    }
+  }
+
+  &__social {
+    margin-top: 45px;
+    h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 1.197px;
+
+      color: #FFFFFF;
+    }
+  }
+
+  &__list-social {
+    display: flex;
+  }
+
+  &__item {
+    transition: all .3s;
+    $icons-margin-top: 11px;
+    margin-top: $icons-margin-top;
+
+    &:not(:last-child) {
+      margin: $icons-margin-top 46px 0 0;
+    }
+
+    svg {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(0%) hue-rotate(296deg) brightness(105%) contrast(106%);
+    }
+
+  }
+}
+
+.icon {
+
+  -webkit-transition: -webkit-filter 5000ms linear;
+
+  &:hover {
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &-in {
+    position: relative;
+
+    svg {
+      width: 30px;
+      height: 23px;
+    }
+
+    &:hover {
+      svg {
+        filter: invert(30%) sepia(87%) saturate(2070%) hue-rotate(320deg) brightness(89%) contrast(98%);
+      }
+    }
+  }
+
+  &-pt {
+    svg {
+      width: 30px;
+      height: 25px;
+    }
+
+    &:hover {
+      svg {
+        filter: invert(12%) sepia(95%) saturate(6479%) hue-rotate(346deg) brightness(88%) contrast(107%);
+      }
+    }
+  }
+
+  &-fb {
+    svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    &:hover {
+      svg {
+        filter: invert(29%) sepia(87%) saturate(5225%) hue-rotate(205deg) brightness(95%) contrast(99%);
+
+      }
+    }
+  }
+
+  &-tk {
+    svg {
+      width: 31px;
+      height: 25px;
+    }
+
+    &:hover {
+      svg {
+        filter: invert(0%) sepia(34%) saturate(0%) hue-rotate(64deg) brightness(86%) contrast(103%);
+      }
+    }
+  }
+}

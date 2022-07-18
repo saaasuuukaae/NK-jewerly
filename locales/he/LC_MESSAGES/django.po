@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-18 14:05+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
+"1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+
+#: .\main\admin.py:17
+msgid "Image"
+msgstr ""
+
+#: .\main\models.py:13
+msgid "Image in gallery"
+msgstr ""
+
+#: .\main\models.py:17
+msgid "Short image description"
+msgstr ""
+
+#: .\main\models.py:22
+msgid "The text is too long, it should be a maximum of 350 characters."
+msgstr ""
+
+#: .\main\models.py:28
+msgid "Show this picture in the gallery images list?"
+msgstr ""
+
+#: .\main\models.py:35
+msgid "Created at"
+msgstr ""
+
+#: .\main\models.py:41
+msgid "Gallery image"
+msgstr ""
+
+#: .\main\models.py:42
+msgid "Gallery images"
+msgstr ""
+
+#: .\main\models.py:49
+msgid "Visible"
+msgstr ""
+
+#: .\main\templates\main\index.html:33
+msgid "View my gallery"
+msgstr ""
+
+#: .\nk\settings.py:120
+msgid "Russian"
+msgstr ""
+
+#: .\nk\settings.py:121
+msgid "English"
+msgstr ""
+
+#: .\nk\settings.py:122
+msgid "Hebrew"
+msgstr ""
