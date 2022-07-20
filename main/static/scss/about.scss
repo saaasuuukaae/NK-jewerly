@@ -1,3 +1,5 @@
+@import "media/breakpoints";
+
 .about {
   width: 100%;
   padding: 78px 0;
@@ -17,6 +19,7 @@
     width: 440px;
     transform: translateX(-16%);
     opacity: 0;
+    border-radius: 12px;
 
     &.image-loaded {
       animation: fadeIn 0.5s .0s 1 forwards linear;
@@ -33,6 +36,11 @@
       font-family: Montserrat, sans-serif;
 
       color: #1b1b1b;
+
+      @include lg-d {
+        font-size: 65px;
+      }
+
     }
 
     h5 {

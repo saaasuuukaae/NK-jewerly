@@ -22,6 +22,7 @@
   -webkit-transform: translateX(-16%);
           transform: translateX(-16%);
   opacity: 0;
+  border-radius: 12px;
 }
 .about img.image-loaded {
   -webkit-animation: fadeIn 0.5s 0s 1 forwards linear;
@@ -35,6 +36,11 @@
   text-transform: capitalize;
   font-family: Montserrat, sans-serif;
   color: #1b1b1b;
+}
+@media (max-width: 1279.8px) {
+  .about__text h1 {
+    font-size: 65px;
+  }
 }
 .about__text h5 {
   font-size: 25px;

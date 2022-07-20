@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
     <link rel="stylesheet" href="{% static 'css/langs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 
 
     <!--  Google fonts  -->
@@ -20,18 +21,17 @@
 {% block main %}
 
 
-        <section id="intro">
-            <div class="container">
-                <div class="intro__body">
-                    <div class="intro__title">
-                        {% trans 'Jewerly Jewerly Jewerly Jewerly' %}
-                    </div>
-                    <div class="intro__subtitle">
-                        {% trans 'lorem ipsum dalores lorem ipsum dalores lorem ipsum dalores lorem ipsum dalores' %}
-                    </div>
-                    <div class="intro__button">
-                        <a href="#gallery">{% trans 'View my gallery' %}</a>
-                    </div>
+    <section id="intro" style="background-image: url('{% static "/img/bg/01.jpg" %}')">
+        <div class="container">
+            <div class="intro__body">
+                <div class="intro__title">
+                    {% trans 'Jewerly Jewerly Jewerly Jewerly' %}
+                </div>
+                <div class="intro__subtitle">
+                    {% trans 'lorem ipsum dalores lorem ipsum dalores lorem ipsum dalores lorem ipsum dalores' %}
+                </div>
+                <div class="intro__button">
+                    <a href="#gallery">{% trans 'View my gallery' %}</a>
                 </div>
                 <div class="intro__social">
                     <h4>{% trans 'Me in social media' %}</h4>
@@ -79,53 +79,150 @@
                     </ul>
                 </div>
             </div>
-        </section>
-        <section id="about">
+
+        </div>
+    </section>
+    <section id="about">
 
 
-                <div class="about">
-                    <div class="container content">
-                    <div class="about__main">
-                        <div class="about__picture">
-                            <img data-lazy-src="{% static 'img/bg/02.jpg' %}" src alt="My photo">
-                        </div>
+        <div class="about">
+            <div class="container content">
+                <div class="about__main">
+                    <div class="about__picture">
+                        <img data-lazy-src="{% static 'img/bg/02.jpg' %}" src alt="My photo">
+                    </div>
 
 
-                        <div class="about__text">
-                            <h1>{% trans 'About me' %}</h1>
-                            <h5>{% trans 'Jew' %}<span>{% trans 'elry' %}</span></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum illo iusto labore odit
-                                officia perferendis, perspiciatis repellendus tempora voluptatem. A aspernatur assumenda
-                                at,
-                                aut autem beatae consequatur eius eum eveniet facere fuga incidunt nisi nostrum
-                                obcaecati
-                                officia officiis omnis provident quidem reiciendis, repellendus rerum sequi, velit.
-                                Accusamus delectus eum exercitationem hic iure libero, magnam totam unde? Accusamus
-                                adipisci
-                                cupiditate est ex impedit molestiae nam natus, neque odio pariatur recusandae repellat.
-                                Cumque eligendi fuga fugiat fugit impedit itaque laboriosam molestias nemo numquam,
-                                optio
-                                possimus provident reiciendis sit, tempora, tenetur unde ut vitae. Atque autem deserunt
-                                facilis iure nemo nobis officiis provident quos reprehenderit voluptatem! Ab dicta enim
-                                eos
-                                et, fuga iusto magnam magni odit officia quasi repudiandae temporibus unde velit
-                                voluptate?</p>
+                    <div class="about__text">
+                        <h1>{% trans 'About me' %}</h1>
+                        <h5>{% trans 'Jew' %}<span>{% trans 'elry' %}</span></h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum illo iusto labore odit
+                            officia perferendis, perspiciatis repellendus tempora voluptatem. A aspernatur assumenda
+                            at,
+                            aut autem beatae consequatur eius eum eveniet facere fuga incidunt nisi nostrum
+                            obcaecati
+                            officia officiis omnis provident quidem reiciendis, repellendus rerum sequi, velit.
+                            Accusamus delectus eum exercitationem hic iure libero, magnam totam unde? Accusamus
+                            adipisci
+                            cupiditate est ex impedit molestiae nam natus, neque odio pariatur recusandae repellat.
+                            Cumque eligendi fuga fugiat fugit impedit itaque laboriosam molestias nemo numquam,
+                            optio
+                            possimus provident reiciendis sit, tempora, tenetur unde ut vitae. Atque autem deserunt
+                            facilis iure nemo nobis officiis provident quos reprehenderit voluptatem! Ab dicta enim
+                            eos
+                            et, fuga iusto magnam magni odit officia quasi repudiandae temporibus unde velit
+                            voluptate?</p>
 
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-        </section>
-        <section id="gallery">
-            <div class="gallery">
-                {% for pic in pics %}
+    </section>
 
-                    <img data-lazy-src="{{ pic.Image.url }}" src="" alt="{{ pic.Image.url }}">
+    <section id="gallery">
+        <div class="gallery {% if not pics %}no-images{% endif %}">
+            <div class="container">
 
-                {% endfor %}
+                <!-- GRID ROW -->
+                {% if pics %}
+                    <div class="gallery__body">
+
+                        {% for pic in pics %}
+                            <div
+                                class="gallery__item{% if pic.wide %} gallery__item-wide{% endif %}{% if pic.high %} gallery__item-tall{% endif %}"
+                                data-lazy-css="{{ pic.Image.url }}"
+                        >
+                            <p>
+                                {{ pic.description }}
+                            </p>
+                        </div>
+                        {% endfor %}
+
+
+
+                        {#                        <div#}
+                        {#                                class="gallery__item gallery__item-tall"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item "#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item gallery__item-wide"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {##}
+                        {#                        </div>#}
+                        {#                        <div#}
+                        {#                                class="gallery__item"#}
+                        {#                                data-lazy-css="/media/GALLERY/22/07/18/images.jfif"#}
+                        {#                        >#}
+                        {#                            #}
+                        {#                        </div>#}
+
+
+                    </div>
+                {% else %}
+
+                    <div class="gallery__no-images">
+
+                        <h1>{% trans 'Sorry, but here is no images available.' %}</h1>
+
+                    </div>
+
+                {% endif %}
             </div>
-        </section>
+        </div>
+    </section>
+
 
 
 {% endblock %}

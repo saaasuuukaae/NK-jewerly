@@ -31,6 +31,20 @@ class GalleryImage(models.Model):
 		null=False
 	)
 
+	wide = models.BooleanField(
+		verbose_name=_("Should this picture be given more width in the gallery?"),
+		help_text="Any image with this value will automatically get more width in the gallery.",
+		default=False,
+		null=False,
+	)
+
+	high = models.BooleanField(
+		verbose_name=_("Should this picture be given more height in the gallery?"),
+		help_text="Any image with this value will automatically get more height in the gallery.",
+		default=False,
+		null=False,
+	)
+
 	created_at = models.DateTimeField(
 		verbose_name=_("Created at"),
 		auto_now=True,

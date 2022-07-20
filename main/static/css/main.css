@@ -17,6 +17,11 @@ img {
   max-width: 100vw;
 }
 
+:root {
+  --color__button-dropdown: rgba(170, 170, 170, 0.73);
+  --color__button-go: rgba(170, 170, 170, 0.73);
+}
+
 *, *:before, *:after {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -37,7 +42,6 @@ html, body {
 
 section#intro {
   background-size: cover;
-  background-image: url("../img/bg/01.jpg");
   min-height: 100vh;
   max-width: 100%;
 }
@@ -59,6 +63,125 @@ section#intro {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid #000000;
+}
+
+.icon {
+  -webkit-transition: -webkit-filter 5000ms linear;
+}
+.icon svg {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(0%) hue-rotate(296deg) brightness(105%) contrast(106%);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(0%) hue-rotate(296deg) brightness(105%) contrast(106%);
+}
+.icon:hover svg {
+  cursor: pointer;
+}
+.icon-in {
+  position: relative;
+}
+.icon-in svg {
+  width: 30px;
+  height: 23px;
+}
+.icon-in:hover svg {
+  -webkit-filter: invert(30%) sepia(87%) saturate(2070%) hue-rotate(320deg) brightness(89%) contrast(98%);
+          filter: invert(30%) sepia(87%) saturate(2070%) hue-rotate(320deg) brightness(89%) contrast(98%);
+}
+.icon-pt svg {
+  width: 30px;
+  height: 25px;
+}
+.icon-pt:hover svg {
+  -webkit-filter: invert(12%) sepia(95%) saturate(6479%) hue-rotate(346deg) brightness(88%) contrast(107%);
+          filter: invert(12%) sepia(95%) saturate(6479%) hue-rotate(346deg) brightness(88%) contrast(107%);
+}
+.icon-fb svg {
+  width: 23px;
+  height: 23px;
+}
+.icon-fb:hover svg {
+  -webkit-filter: invert(29%) sepia(87%) saturate(5225%) hue-rotate(205deg) brightness(95%) contrast(99%);
+          filter: invert(29%) sepia(87%) saturate(5225%) hue-rotate(205deg) brightness(95%) contrast(99%);
+}
+.icon-tk svg {
+  width: 31px;
+  height: 25px;
+}
+.icon-tk:hover svg {
+  -webkit-filter: invert(0%) sepia(34%) saturate(0%) hue-rotate(64deg) brightness(86%) contrast(103%);
+          filter: invert(0%) sepia(34%) saturate(0%) hue-rotate(64deg) brightness(86%) contrast(103%);
+}
+
+.language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.language button[value=go] {
+  cursor: pointer;
+  color: var(--color__button-go);
+  padding: 0 0.8rem;
+  font-size: 20px;
+  font-family: Poppins, sans-serif;
+  background-color: #3b3c47;
+  border: 0;
+  outline: 0;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+}
+.language button[value=go]:hover {
+  color: #fff;
+}
+.language-pick {
+  position: relative;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.language-pick select[name=language] {
+  cursor: pointer;
+  padding: 1em 3rem 1em 1.5em;
+  background-color: #4d5061;
+  color: #fff;
+  outline: none;
+  border: 0;
+  font-family: Poppins, sans-serif;
+  border-radius: 0.25rem;
+}
+.language-pick:hover {
+  --color__button-dropdown: #fff;
+}
+.language-pick__arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background-color: #3b3c47;
+  height: 100%;
+  aspect-ratio: 1/1;
+  pointer-events: none;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.language-pick__arrow:before, .language-pick__arrow:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.language-pick__arrow:before {
+  top: 40%;
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.5em solid var(--color__button-dropdown);
+}
+.language-pick__arrow:after {
+  top: 60%;
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-top: 0.5em solid var(--color__button-dropdown);
 }
 
 @-webkit-keyframes fadeIn {

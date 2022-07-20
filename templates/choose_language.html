@@ -1,0 +1,27 @@
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+<form action="{% url 'set_language' %}" method="POST" class="language{% if LANGUAGE_CODE|lower == 'he' %} reverse{% endif %}">
+    {% csrf_token %}
+    <div class="language-pick">
+        <input name="next" type="hidden" value="/">
+        <select name="language">
+            {% for l in languages %}
+                <option
+                        value="{{ l.code|lower }}"
+                        {% if l.code|lower == LANGUAGE_CODE|lower %}
+                        selected
+                        {% endif %}
+                >
+                    ({{ l.code|capfirst }}) {{ l.name_local }}
+                </option>
+            {% endfor %}
+            {#                                    <option value="ru" selected>(Ru) Русский</option>#}
+            {#                                    <option value="en">(En) English</option>#}
+            {#                                    <option value="he">(He) עברית</option>#}
+        </select>
+        <span class="language-pick__arrow"></span>
+    </div>
+    <button type="submit" value="go" style="{% if LANGUAGE_CODE|lower == 'he' %}margin: 0 .5rem 0 0;{% endif %}">{% if LANGUAGE_CODE|lower == 'he' %}&laquo;{% else %}&raquo;{% endif %}</button>
+</form>

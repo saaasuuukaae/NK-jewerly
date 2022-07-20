@@ -1,0 +1,91 @@
+@use 'media/breakpoints';
+
+$px__social-gap: 36px;
+
+.footer {
+  background: linear-gradient(160deg, #7AC4F5, #fff);
+
+  &__body {
+    padding: 1rem 1.5rem 0 1.5rem;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-areas:
+      's t l'
+      'c c c';
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.2rem;
+  }
+
+  &__col {
+
+    &-social {
+      display: flex;
+      justify-content: center;
+      grid-area: s;
+
+      p {
+        color: #fff;
+        font-size: 1.1rem;
+      }
+
+    }
+
+    &-lang {
+      grid-area: l;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-text {
+      grid-area: t;
+
+      p {
+        font-family: Montserrat, sans-serif;
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+
+    &-copy {
+      grid-area: c;
+      margin: 1rem 0 0.25rem 0;
+      text-align: center;
+
+      p {
+        color: rgba(0, 119, 255, 0.8);
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+
+        &:first-line {
+          font-size: 1.1rem;
+          margin-bottom: 6px;
+          font-family: "Playfair Display", sans-serif;
+        }
+      }
+    }
+
+
+  }
+
+  &__list {
+    &-social {
+      display: flex;
+
+
+    }
+  }
+
+  &__item {
+    $margin-top: 10px;
+    margin: $margin-top 0 0 0;
+
+    &:not(:last-child) {
+      margin: $margin-top $px__social-gap 0 0;
+    }
+
+  }
+
+}
