@@ -33,14 +33,16 @@
                             {% trans 'About me' %}
                         </a> <!-- type: ignore -->
                     </li>
-                    <li class="header__item">
-                        <a href="#gallery" class="header__link {% if LANGUAGE_CODE|lower == 'he' %}reverse-text{% endif %}"> <!-- type: ignore -->
-                            {% trans 'Gallery' %}
-                        </a>
-                    </li>
-                    <li class="header__item">
+                    {% if pics %}
+                        <li class="header__item">
+                            <a href="#gallery" class="header__link {% if LANGUAGE_CODE|lower == 'he' %}reverse-text{% endif %}"> <!-- type: ignore -->
+                                {% trans 'Gallery' %}
+                            </a>
+                        </li>
+                    {% endif %}
+                    <li class="header__item lang">
 
-                        <label for="" class="header__link">{% include 'choose_language.html' %}</label>
+                        <label for="" class="">{% include 'choose_language.html' %}</label>
 
                         {#                        <label class="header__link">#}
                         {##}
@@ -59,7 +61,6 @@
                         {#                        </label>#}
                     </li>
                 </ul>
-
             </div>
         </div>
 

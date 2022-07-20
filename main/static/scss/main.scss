@@ -1,11 +1,16 @@
+@use 'media/breakpoints' as bk;
 @import "null";
 
-$em__button-size: 0.5em;
+
+$em__button-size: 0.5rem;
 
 :root {
   --color__button-dropdown: rgba(170, 170, 170, 0.73);
 
   --color__button-go: rgba(170, 170, 170, 0.73);
+
+  --px__max-height: 49.66px;
+
 }
 
 
@@ -22,9 +27,16 @@ html, body {
   margin: auto;
   padding: 0 10px;
 
+  @include bk.md-d {
+    max-width: 800px;
+  }
+
   &.content {
     max-width: 1130px;
+
   }
+
+
 }
 
 section#intro {
@@ -34,6 +46,11 @@ section#intro {
   //);
   min-height: 100vh;
   max-width: 100%;
+
+  @include bk.s-d {
+    min-height: max-content;
+    padding: 10px 0;
+  }
 }
 
 .reverse {
@@ -142,6 +159,7 @@ section#intro {
       outline: 0;
       border-radius: $rem-border-radius;
       margin-left: 0.5rem;
+      max-height: var(--px__max-height);
 
       &:hover {
         color: #fff;
@@ -154,6 +172,7 @@ section#intro {
 
     position: relative;
     max-width: max-content;
+    max-height: var(--px__max-height);
 
     select {
 

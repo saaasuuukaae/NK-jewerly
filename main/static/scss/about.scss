@@ -1,4 +1,4 @@
-@import "media/breakpoints";
+@use "media/breakpoints" as bk;
 
 .about {
   width: 100%;
@@ -12,6 +12,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @include bk.md-d {
+      flex-direction: column-reverse;
+    }
   }
 
   & img {
@@ -23,6 +27,23 @@
 
     &.image-loaded {
       animation: fadeIn 0.5s .0s 1 forwards linear;
+    }
+
+    @include bk.md-d {
+      margin: 30px 0 0 0;
+      width: 550px;
+      height: auto;
+      transform: translateY(16%);
+
+    }
+
+    @include bk.s-d {
+      max-width: 400px;
+      margin: 30px auto 0 auto;
+    }
+    @include bk.ms-d {
+      max-width: 350px;
+      margin: 30px auto 0 auto;
     }
 
   }
@@ -37,10 +58,19 @@
 
       color: #1b1b1b;
 
-      @include lg-d {
+      @include bk.lg-d {
         font-size: 65px;
       }
 
+      @include bk.s-d {
+        font-size: 65px;
+        max-width: 400px;
+        margin: auto;
+      }
+      @include bk.ms-d {
+        max-width: 350px;
+        margin: auto;
+      }
     }
 
     h5 {
@@ -54,6 +84,19 @@
       span {
         color: #f9004d;
       }
+
+      @include bk.s-d {
+        font-size: 22px;
+        margin: 0 auto 20px auto;
+        max-width: 400px;
+        letter-spacing: 1px;
+
+      }
+      @include bk.ms-d {
+        max-width: 350px;
+        margin: 0 auto 20px auto;
+      }
+
     }
 
 
@@ -63,6 +106,20 @@
       font-size: 18px;
       color: #1b1b1b;
       font-family: Montserrat, sans-serif;
+
+      @include bk.s-d {
+        max-width: 400px;
+        margin: auto;
+
+        line-height: 20px;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
+
+      @include bk.ms-d {
+        max-width: 350px;
+        margin: auto;
+      }
     }
   }
 

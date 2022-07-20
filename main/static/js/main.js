@@ -43,7 +43,7 @@ LLImages.forEach(
 const header = document.querySelector('.header');
 const intro = document.querySelector('section#intro');
 const sOOptions = {
-    rootMargin: '100px 0px 0px 0px',
+    rootMargin: '0px 0px 0px 0px',
 }
 
 const sO = (entries, sO) => {

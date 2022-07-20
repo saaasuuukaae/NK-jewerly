@@ -121,11 +121,12 @@
     </section>
 
     <section id="gallery">
-        <div class="gallery {% if not pics %}no-images{% endif %}">
+        <div class="gallery{% if not pics %} no-images{% endif %}">
             <div class="container">
 
                 <!-- GRID ROW -->
                 {% if pics %}
+                    <h1>{% trans 'Gallery, here is my jewerly images!' %}</h1>
                     <div class="gallery__body">
 
                         {% for pic in pics %}
