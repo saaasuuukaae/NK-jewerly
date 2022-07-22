@@ -1,13 +1,22 @@
 from django.contrib import admin
+from django.contrib.auth.models import Group
 from django.utils.safestring import mark_safe
 from django.utils.translation import gettext_lazy as _
+from modeltranslation.admin import TranslationAdmin
 
 from .models import *
 
+admin.site.unregister(Group)
 
-# Register your models here.
+
+@admin.register(Design)
+class DesignAdmin(TranslationAdmin):
+	list_display = ('pk', 'title', 'display')
+	list_editable = ('display',)
+
+
 @admin.register(GalleryImage)
-class GalleryAdmin(admin.ModelAdmin):
+class GalleryAdmin(TranslationAdmin):
 	list_display = ('pk', 'wide', 'high', 'show')
 	list_editable = ('wide', 'high', 'show')
 	readonly_fields = ("get_date", "get_image_readonly")

@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Наталья Каретный</title>
+    <title>{{ page_title }}</title>
     <link rel="shortcut icon" href="" type="image/x-icon">
 
     {% get_current_language as LANGUAGE_CODE %}
@@ -81,7 +81,7 @@
                 <div class="footer__row">
                     <div class="footer__col footer__col-social">
                         <div>
-                            <p>
+                            <p {% if LANGUAGE_CODE|lower == 'he' %}class="reverse-text"{% endif %}>
                                 {% trans 'Follow in social media' %}
                             </p>
                             <ul class="footer__list footer__list-social">
@@ -155,8 +155,7 @@
                     </div>
                     <div class="footer__col footer__col-text">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis dolore, dolorum eos error fugit harum in laboriosam libero nam nihil numquam repellat sint sit
-                            tenetur, vel velit vero voluptate!
+                            {{ design.footer_text }}
                         </p>
                     </div>
                     <div class="footer__col footer__col-copy">

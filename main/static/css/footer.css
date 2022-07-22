@@ -130,6 +130,11 @@
     -ms-grid-column-span: 1;
   }
 }
+@media (max-width: 639.8px) {
+  .footer__col-copy {
+    max-height: 50px;
+  }
+}
 .footer__col-copy p {
   color: rgba(0, 119, 255, 0.8);
   font-size: 1rem;

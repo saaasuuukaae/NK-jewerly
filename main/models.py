@@ -4,12 +4,80 @@ from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 
-PHOTO_URL = "GALLERY/"
+PHOTO_URL = "photos"
+
+
+class Design(models.Model):
+	title = models.CharField(
+		max_length=185,
+		blank=True,
+		verbose_name=_("Title for <<main>> screen.")
+	)
+
+	subtitle = models.TextField(
+		blank=True,
+		verbose_name=_("Subtitle for <<main>> screen.")
+	)
+
+	background = models.ImageField(
+		upload_to=f"{PHOTO_URL}/BACKGROUND/%y/%m/%d",
+		verbose_name=_("Background for <<main>> screen.")
+	)
+
+	about_picture = models.ImageField(
+		upload_to=f"{PHOTO_URL}/ABOUT-PICS/%y/%m/%d",
+		verbose_name=_("About picture for <<about>> screen.")
+	)
+
+	about_title = models.CharField(
+		max_length=50,
+		blank=False,
+		verbose_name=_("Title for <<about>> screen.")
+	)
+
+	about_subtitle = models.CharField(
+		max_length=50,
+		blank=False,
+		verbose_name=_("Subtitle for <<about>> screen.")
+	)
+
+	about_text = models.TextField(
+		blank=True,
+		verbose_name=_("A huge text for for <<about>> screen.")
+	)
+
+	footer_text = models.TextField(
+		blank=True,
+		verbose_name=_("Small text for <<footer>>.")
+
+	)
+
+	display = models.BooleanField(
+		db_index=True,
+		verbose_name=_("Display this design?"),
+	)
+
+	class Meta:
+		verbose_name = _("Site design")
+		verbose_name_plural = _("Site designs")
+		ordering = ('display',)
+
+	@property
+	def about_sub(self):
+		s = str(self.about_subtitle)
+		s1 = s[:len(s) // 2]
+		s2 = s[len(s) // 2:]
+
+		print(s)
+		print(s1)
+		print(s2)
+		print([s1, s2])
+		return [s1, s2]
 
 
 class GalleryImage(models.Model):
 	Image = models.ImageField(
-		upload_to=f"{PHOTO_URL}%y/%m/%d",
+		upload_to=f"{PHOTO_URL}/GALLERY/%y/%m/%d",
 		verbose_name=_("Image in gallery"),
 	)
 
@@ -61,3 +129,28 @@ class GalleryImage(models.Model):
 
 	def __repr__(self):
 		return f'{self.pk:,} - %(visible)s - {self.show}' % {'visible': _("Visible")}
+
+# make user model
+class User(models.Model):
+
+	name = models.CharField(
+		max_length=50,
+		blank=False,
+		verbose_name=_("Name")
+	)
+
+	email = models.EmailField(
+		max_length=50,
+		blank=False,
+		verbose_name=_("Email")
+	)
+
+	password = models.CharField(
+		max_length=50,
+		blank=False,
+		verbose_name=_("Password")
+	)
+
+	class Meta:
+		verbose_name = _("User")
+		verbose_name_plural = _("Users")

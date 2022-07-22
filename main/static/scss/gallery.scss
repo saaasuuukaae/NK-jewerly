@@ -29,6 +29,10 @@ $int__image-column-wide: 2;
     grid-template-columns: repeat(auto-fill, minmax($px__min-image-width, 1fr));
     padding: 30px 15px;
     grid-auto-rows: $px__min-image-width;
+
+    &.reverse {
+      justify-items: end;
+    }
   }
 
   &__item {

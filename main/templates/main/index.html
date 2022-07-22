@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
-    <link rel="stylesheet" href="{% static 'css/langs.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 
 
@@ -21,65 +20,72 @@
 {% block main %}
 
 
-    <section id="intro" style="background-image: url('{% static "/img/bg/01.jpg" %}')">
-        <div class="container">
-            <div class="intro__body">
-                <div class="intro__title">
-                    {% trans 'Jewerly Jewerly Jewerly Jewerly' %}
-                </div>
-                <div class="intro__subtitle">
-                    {% trans 'lorem ipsum dalores lorem ipsum dalores lorem ipsum dalores lorem ipsum dalores' %}
-                </div>
-                <div class="intro__button">
-                    <a href="#gallery">{% trans 'View my gallery' %}</a>
-                </div>
-                <div class="intro__social">
-                    <h4>{% trans 'Me in social media' %}</h4>
-                    <ul class="intro__list intro__list-social">
-                        <li class="intro__item icon icon-in">
-                            <a href="https://www.instagram.com/_jewelrynk_/?fbclid=IwAR1U5xqta94SUGEnbE2nyIlnPvu15FJFGMzfF2rNHP2Q3EnXQ7cgeyRq2hE">
-                                <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="50px"
-                                     height="50px">
-                                    <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"
-                                          d="M7.546,25h10.909C22.07,25,25,22.07,25,18.454V7.545C25,3.93,22.07,1,18.454,1H7.545C3.93,1,1,3.93,1,7.546v10.909C1,22.07,3.93,25,7.546,25z"></path>
-                                    <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"
-                                          d="M13 7A6 6 0 1 0 13 19A6 6 0 1 0 13 7Z"></path>
-                                    <path d="M20.5 4A1.5 1.5 0 1 0 20.5 7A1.5 1.5 0 1 0 20.5 4Z"></path>
-                                </svg>
-                            </a>
+    <section id="intro" style="background-image: url('{{ design.background.url }}')">
+        <div class="intro">
+            <div class="container">
+                <div class="intro__body{% if LANGUAGE_CODE|lower == 'he'|lower %} reverse{% endif %}">
+                    <div class="intro__title{% if LANGUAGE_CODE|lower == 'he'|lower %} reverse-text{% endif %}">
+                        {{ design.title }}
+                    </div>
+                    <div class="intro__subtitle{% if LANGUAGE_CODE|lower == 'he'|lower %} reverse-text{% endif %}">
+                        {{ design.subtitle }}
 
-                        </li>
-                        <li class="intro__item icon icon-pt">
-                            <a href="https://www.pinterest.com/Nkjewelry/?invite_code=e5c7da9bdff541629e44440d69c9b4c3&sender=61854332290599086">
-                                <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
-                                     height="50px">
-                                    <path d="M25,2C12.3178711,2,2,12.3178711,2,25c0,9.8841553,6.2675781,18.3302612,15.036377,21.5769653	c-0.2525635-2.2515869-0.2129517-5.9390259,0.2037964-7.7243652c0.3902588-1.677002,2.5212402-10.6871338,2.5212402-10.6871338	s-0.6433105-1.2883301-0.6433105-3.1911011c0-2.9901733,1.7324219-5.2211914,3.8898315-5.2211914	c1.8349609,0,2.7197876,1.3776245,2.7197876,3.0281982c0,1.8457031-1.1734619,4.6026611-1.78125,7.1578369	c-0.506897,2.1409302,1.0733643,3.8865356,3.1836548,3.8865356c3.821228,0,6.7584839-4.0296021,6.7584839-9.8453369	c0-5.147583-3.697998-8.7471924-8.9795532-8.7471924c-6.1167603,0-9.7072754,4.588562-9.7072754,9.3309937	c0,1.8473511,0.7111816,3.8286743,1.6000977,4.9069824c0.175293,0.2133179,0.2009277,0.3994141,0.1488647,0.6160278	c-0.1629028,0.678894-0.5250854,2.1392822-0.5970459,2.4385986c-0.0934448,0.3944702-0.3117676,0.4763184-0.7186279,0.2869263	c-2.685791-1.2503052-4.364502-5.1756592-4.364502-8.3295898c0-6.7815552,4.9268188-13.0108032,14.206543-13.0108032	c7.4588623,0,13.2547607,5.3138428,13.2547607,12.4179077c0,7.4100342-4.6729126,13.3729858-11.1568604,13.3729858	c-2.178894,0-4.2263794-1.132019-4.9267578-2.4691772c0,0-1.0783081,4.1048584-1.3404541,5.1112061	c-0.4524536,1.7404175-2.3892822,5.3460083-3.3615723,6.9837036C20.1704712,47.6074829,22.5397949,48,25,48	c12.6826172,0,23-10.3173828,23-23C48,12.3178711,37.6826172,2,25,2z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="intro__item icon icon-fb">
+                    </div>
+                    <div class="intro__button">
+                        <a href="#gallery">{% trans 'View my gallery' %}</a>
+                    </div>
+                    <div class="intro__social">
+                        <h4 {% if LANGUAGE_CODE|lower == 'he'|lower %}class="reverse-text" style="color: #aaaaaa;" {% endif %}>{% trans 'Follow in social media' %}</h4>
+                        <ul class="intro__list intro__list-social">
+                            <li class="intro__item icon icon-in{% if LANGUAGE_CODE|lower == 'he'|lower %} darken{% endif %}">
+                                <a href="https://www.instagram.com/_jewelrynk_/?fbclid=IwAR1U5xqta94SUGEnbE2nyIlnPvu15FJFGMzfF2rNHP2Q3EnXQ7cgeyRq2hE">
+                                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="50px"
+                                         height="50px"
+                                         >
+                                        <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"
+                                              d="M7.546,25h10.909C22.07,25,25,22.07,25,18.454V7.545C25,3.93,22.07,1,18.454,1H7.545C3.93,1,1,3.93,1,7.546v10.909C1,22.07,3.93,25,7.546,25z"></path>
+                                        <path fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2"
+                                              d="M13 7A6 6 0 1 0 13 19A6 6 0 1 0 13 7Z"></path>
+                                        <path d="M20.5 4A1.5 1.5 0 1 0 20.5 7A1.5 1.5 0 1 0 20.5 4Z"></path>
+                                    </svg>
+                                </a>
 
-                            <a href="https://www.facebook.com/NKjewelrydesign">
-                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.36525 0.0037452L7.03106 0C4.40867 0 2.71396 1.73871 2.71396 4.42982V6.47227H0.36703C0.164227 6.47227 0 6.63668 0 6.83949V9.79876C0 10.0016 0.164415 10.1658 0.36703 10.1658H2.71396V17.633C2.71396 17.8358 2.87819 18 3.08099 18H6.14307C6.34587 18 6.5101 17.8356 6.5101 17.633V10.1658H9.25421C9.45701 10.1658 9.62124 10.0016 9.62124 9.79876L9.62236 6.83949C9.62236 6.74211 9.5836 6.64886 9.51487 6.57994C9.44615 6.51103 9.35252 6.47227 9.25514 6.47227H6.5101V4.74086C6.5101 3.90868 6.70841 3.48622 7.79246 3.48622L9.36488 3.48566C9.56749 3.48566 9.73172 3.32124 9.73172 3.11863V0.370775C9.73172 0.168347 9.56768 0.00411972 9.36525 0.0037452Z"
-                                          fill="white"></path>
-                                </svg>
-                            </a>
+                            </li>
+                            <li class="intro__item icon icon-pt{% if LANGUAGE_CODE|lower == 'he'|lower %} darken{% endif %}">
+                                <a href="https://www.pinterest.com/Nkjewelry/?invite_code=e5c7da9bdff541629e44440d69c9b4c3&sender=61854332290599086">
+                                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
+                                         height="50px"
+                                        >
+                                        <path d="M25,2C12.3178711,2,2,12.3178711,2,25c0,9.8841553,6.2675781,18.3302612,15.036377,21.5769653	c-0.2525635-2.2515869-0.2129517-5.9390259,0.2037964-7.7243652c0.3902588-1.677002,2.5212402-10.6871338,2.5212402-10.6871338	s-0.6433105-1.2883301-0.6433105-3.1911011c0-2.9901733,1.7324219-5.2211914,3.8898315-5.2211914	c1.8349609,0,2.7197876,1.3776245,2.7197876,3.0281982c0,1.8457031-1.1734619,4.6026611-1.78125,7.1578369	c-0.506897,2.1409302,1.0733643,3.8865356,3.1836548,3.8865356c3.821228,0,6.7584839-4.0296021,6.7584839-9.8453369	c0-5.147583-3.697998-8.7471924-8.9795532-8.7471924c-6.1167603,0-9.7072754,4.588562-9.7072754,9.3309937	c0,1.8473511,0.7111816,3.8286743,1.6000977,4.9069824c0.175293,0.2133179,0.2009277,0.3994141,0.1488647,0.6160278	c-0.1629028,0.678894-0.5250854,2.1392822-0.5970459,2.4385986c-0.0934448,0.3944702-0.3117676,0.4763184-0.7186279,0.2869263	c-2.685791-1.2503052-4.364502-5.1756592-4.364502-8.3295898c0-6.7815552,4.9268188-13.0108032,14.206543-13.0108032	c7.4588623,0,13.2547607,5.3138428,13.2547607,12.4179077c0,7.4100342-4.6729126,13.3729858-11.1568604,13.3729858	c-2.178894,0-4.2263794-1.132019-4.9267578-2.4691772c0,0-1.0783081,4.1048584-1.3404541,5.1112061	c-0.4524536,1.7404175-2.3892822,5.3460083-3.3615723,6.9837036C20.1704712,47.6074829,22.5397949,48,25,48	c12.6826172,0,23-10.3173828,23-23C48,12.3178711,37.6826172,2,25,2z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="intro__item icon icon-fb{% if LANGUAGE_CODE|lower == 'he'|lower %} darken{% endif %}">
 
-                        </li>
-                        <li class="intro__item icon icon-tk">
-                            <a href="https://www.tiktok.com/@your_jeweler">
-                                <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
-                                     height="50px">
-                                    <path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                                <a href="https://www.facebook.com/NKjewelrydesign">
+                                    <svg width="10" height="18" viewBox="0 0 10 18" fill="#000000"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                        <path d="M9.36525 0.0037452L7.03106 0C4.40867 0 2.71396 1.73871 2.71396 4.42982V6.47227H0.36703C0.164227 6.47227 0 6.63668 0 6.83949V9.79876C0 10.0016 0.164415 10.1658 0.36703 10.1658H2.71396V17.633C2.71396 17.8358 2.87819 18 3.08099 18H6.14307C6.34587 18 6.5101 17.8356 6.5101 17.633V10.1658H9.25421C9.45701 10.1658 9.62124 10.0016 9.62124 9.79876L9.62236 6.83949C9.62236 6.74211 9.5836 6.64886 9.51487 6.57994C9.44615 6.51103 9.35252 6.47227 9.25514 6.47227H6.5101V4.74086C6.5101 3.90868 6.70841 3.48622 7.79246 3.48622L9.36488 3.48566C9.56749 3.48566 9.73172 3.32124 9.73172 3.11863V0.370775C9.73172 0.168347 9.56768 0.00411972 9.36525 0.0037452Z"
+                                              fill="black"></path>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li class="intro__item icon icon-tk{% if LANGUAGE_CODE|lower == 'he'|lower %} darken{% endif %}">
+                                <a href="https://www.tiktok.com/@your_jeweler">
+                                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
+                                         height="50px"
+                                         >
+                                        <path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
-
         </div>
     </section>
     <section id="about">
@@ -89,29 +95,14 @@
             <div class="container content">
                 <div class="about__main">
                     <div class="about__picture">
-                        <img data-lazy-src="{% static 'img/bg/02.jpg' %}" src alt="My photo">
+                        <img data-lazy-src="{{ design.about_picture.url }}" src="" alt="My photo">
                     </div>
 
 
-                    <div class="about__text">
-                        <h1>{% trans 'About me' %}</h1>
-                        <h5>{% trans 'Jew' %}<span>{% trans 'elry' %}</span></h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum illo iusto labore odit
-                            officia perferendis, perspiciatis repellendus tempora voluptatem. A aspernatur assumenda
-                            at,
-                            aut autem beatae consequatur eius eum eveniet facere fuga incidunt nisi nostrum
-                            obcaecati
-                            officia officiis omnis provident quidem reiciendis, repellendus rerum sequi, velit.
-                            Accusamus delectus eum exercitationem hic iure libero, magnam totam unde? Accusamus
-                            adipisci
-                            cupiditate est ex impedit molestiae nam natus, neque odio pariatur recusandae repellat.
-                            Cumque eligendi fuga fugiat fugit impedit itaque laboriosam molestias nemo numquam,
-                            optio
-                            possimus provident reiciendis sit, tempora, tenetur unde ut vitae. Atque autem deserunt
-                            facilis iure nemo nobis officiis provident quos reprehenderit voluptatem! Ab dicta enim
-                            eos
-                            et, fuga iusto magnam magni odit officia quasi repudiandae temporibus unde velit
-                            voluptate?</p>
+                    <div class="about__text{% if LANGUAGE_CODE|lower == 'he' %} reverse-text{% endif %}">
+                        <h1>{{ design.about_title }}</h1>
+                        <h5>{{ design.about_sub.0 }}<span>{{ design.about_sub.1 }}</span></h5>
+                        <p>{{ design.about_text }}</p>
 
                     </div>
                 </div>
@@ -127,17 +118,17 @@
                 <!-- GRID ROW -->
                 {% if pics %}
                     <h1>{% trans 'Gallery, here is my jewerly images!' %}</h1>
-                    <div class="gallery__body">
+                    <div class="gallery__body{% if LANGUAGE_CODE|lower == 'he' %} reverse{% endif %}">
 
                         {% for pic in pics %}
                             <div
-                                class="gallery__item{% if pic.wide %} gallery__item-wide{% endif %}{% if pic.high %} gallery__item-tall{% endif %}"
-                                data-lazy-css="{{ pic.Image.url }}"
-                        >
-                            <p>
-                                {{ pic.description }}
-                            </p>
-                        </div>
+                                    class="gallery__item{% if pic.wide %} gallery__item-wide{% endif %}{% if pic.high %} gallery__item-tall{% endif %}"
+                                    data-lazy-css="{{ pic.Image.url }}"
+                            >
+                                <p>
+                                    {{ pic.description }}
+                                </p>
+                            </div>
                         {% endfor %}
 
 
