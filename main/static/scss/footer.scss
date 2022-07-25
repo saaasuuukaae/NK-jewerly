@@ -7,6 +7,9 @@ $px__social-gap: 36px;
 
   &__body {
     padding: 1rem 1.5rem 0 1.5rem;
+    @include bk.xl {
+      max-height: 25vh;
+    }
   }
 
   &__row {

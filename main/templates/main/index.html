@@ -101,7 +101,7 @@
 
                     <div class="about__text{% if LANGUAGE_CODE|lower == 'he' %} reverse-text{% endif %}">
                         <h1>{{ design.about_title }}</h1>
-                        <h5>{{ design.about_sub.0 }}<span>{{ design.about_sub.1 }}</span></h5>
+                        <h5>{{ design.about_sub.0 }}{{ design.about_sub.1 }}</h5>
                         <p>{{ design.about_text }}</p>
 
                     </div>
@@ -117,7 +117,7 @@
 
                 <!-- GRID ROW -->
                 {% if pics %}
-                    <h1>{% trans 'Gallery, here is my jewerly images!' %}</h1>
+                    <h1>{% trans 'Gallery, here is my jewelry images!' %}</h1>
                     <div class="gallery__body{% if LANGUAGE_CODE|lower == 'he' %} reverse{% endif %}">
 
                         {% for pic in pics %}

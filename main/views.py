@@ -16,17 +16,15 @@ class IndexView(DataMixin, ListView):
 
 	@property
 	def default_design(self) -> Dict:
-		title = _("Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly ")
+		title = _("jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry ")
 		subtitle = _(
-			"Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly ")
+			"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry ")
 		background = {'url': "/static/img/bg/04.jpg"}
 		about_picture = {'url': "/static/img/about/01.jfif"}
 		about_title = _("About me")
 		about_subtitle = [_('jewe'), _('lry')]  # NOQA
 		about_text = _("")
-		footer_text = _("Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly " 
-		                "Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly Jewerly "
-		                "Jewerly Jewerly ")
+		footer_text = _("jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry ")
 
 		return {
 			"title": title,
@@ -49,7 +47,7 @@ class IndexView(DataMixin, ListView):
 	def get_context_data(self, *, object_list=None, **kwargs):
 		raw_context = super().get_context_data(**kwargs)
 		additional_context = self.get_user_context(
-			page_title=_("Nataliya Karetniy"),
+			page_title=_("Natalia Karetniy"),
 			design=self.get_design()
 		)
 

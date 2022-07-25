@@ -43,7 +43,7 @@ class Design(models.Model):
 
 	about_text = models.TextField(
 		blank=True,
-		verbose_name=_("A huge text for for <<about>> screen.")
+		verbose_name=_("A huge text for <<about>> screen.")
 	)
 
 	footer_text = models.TextField(
@@ -125,32 +125,7 @@ class GalleryImage(models.Model):
 		order_with_respect_to = 'show'
 
 	def __str__(self):
-		return str(self.pk)
+		return f"{self.pk:,}"
 
 	def __repr__(self):
 		return f'{self.pk:,} - %(visible)s - {self.show}' % {'visible': _("Visible")}
-
-# make user model
-class User(models.Model):
-
-	name = models.CharField(
-		max_length=50,
-		blank=False,
-		verbose_name=_("Name")
-	)
-
-	email = models.EmailField(
-		max_length=50,
-		blank=False,
-		verbose_name=_("Email")
-	)
-
-	password = models.CharField(
-		max_length=50,
-		blank=False,
-		verbose_name=_("Password")
-	)
-
-	class Meta:
-		verbose_name = _("User")
-		verbose_name_plural = _("Users")

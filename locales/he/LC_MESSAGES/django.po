@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: .\main\views.py:26
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-18 14:05+0300\n"
+"POT-Creation-Date: 2022-07-25 01:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,54 +20,175 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
 "1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: .\main\admin.py:17
+#: .\main\admin.py:30
 msgid "Image"
-msgstr ""
+msgstr "תמונה"
 
-#: .\main\models.py:13
-msgid "Image in gallery"
-msgstr ""
+#: .\main\models.py:14
+msgid "Title for <<main>> screen."
+msgstr "כותרת למסך <<ראשי>>."
 
-#: .\main\models.py:17
-msgid "Short image description"
-msgstr ""
+#: .\main\models.py:19
+msgid "Subtitle for <<main>> screen."
+msgstr "כתובית למסך <<ראשי>>."
 
-#: .\main\models.py:22
-msgid "The text is too long, it should be a maximum of 350 characters."
-msgstr ""
+#: .\main\models.py:24
+msgid "Background for <<main>> screen."
+msgstr "רקע למסך <<ראשי>>."
 
-#: .\main\models.py:28
-msgid "Show this picture in the gallery images list?"
-msgstr ""
+#: .\main\models.py:29
+msgid "About picture for <<about>> screen."
+msgstr "תמונה לגבי מסך <<about>>."
 
 #: .\main\models.py:35
-msgid "Created at"
-msgstr ""
+msgid "Title for <<about>> screen."
+msgstr "כותרת למסך <<about>>."
 
 #: .\main\models.py:41
+msgid "Subtitle for <<about>> screen."
+msgstr "כתובית למסך <<about>>."
+
+#: .\main\models.py:46
+#, fuzzy
+#| msgid "Title for <<about>> screen."
+msgid "A huge text for <<about>> screen."
+msgstr "טקסט ענק למסך <<about>>."
+
+#: .\main\models.py:51
+msgid "Small text for <<footer>>."
+msgstr "טקסט קטן עבור <<footer>>."
+
+#: .\main\models.py:57
+msgid "Display this design?"
+msgstr "להציג את העיצוב הזה?"
+
+#: .\main\models.py:61
+msgid "Site design"
+msgstr "עיצוב האתר"
+
+#: .\main\models.py:62
+msgid "Site designs"
+msgstr "עיצובי אתר"
+
+#: .\main\models.py:81
+msgid "Image in gallery"
+msgstr "תמונה בגלריה"
+
+#: .\main\models.py:85
+msgid "Short image description"
+msgstr "תיאור תמונה קצר"
+
+#: .\main\models.py:90
+msgid "The text is too long, it should be a maximum of 350 characters."
+msgstr "הטקסט ארוך מדי, הוא צריך להיות מרבי של 350 תווים."
+
+#: .\main\models.py:96
+msgid "Show this picture in the gallery images list?"
+msgstr "האם להציג את התמונה הזו ברשימת תמונות הגלריה?"
+
+#: .\main\models.py:103
+msgid "Should this picture be given more width in the gallery?"
+msgstr "האם צריך לתת לתמונה הזו רוחב נוסף בגלריה?"
+
+#: .\main\models.py:110
+msgid "Should this picture be given more height in the gallery?"
+msgstr "האם צריך לתת לתמונה הזו יותר גובה בגלריה?"
+
+#: .\main\models.py:117
+msgid "Created at"
+msgstr "נוצר ב"
+
+#: .\main\models.py:123
 msgid "Gallery image"
-msgstr ""
+msgstr "תמונת גלריה"
 
-#: .\main\models.py:42
+#: .\main\models.py:124
 msgid "Gallery images"
-msgstr ""
+msgstr "תמונות גלריה"
 
-#: .\main\models.py:49
+#: .\main\models.py:131
 msgid "Visible"
-msgstr ""
+msgstr "גלוי"
 
-#: .\main\templates\main\index.html:33
+#: .\main\templates\main\base.html:28 .\main\views.py:50
+msgid "Natalia Karetniy"
+msgstr "נטליה קרטני"
+
+#: .\main\templates\main\base.html:33 .\main\views.py:24
+msgid "About me"
+msgstr "עליי"
+
+#: .\main\templates\main\base.html:39
+msgid "Gallery"
+msgstr "גלריה"
+
+#: .\main\templates\main\base.html:85 .\main\templates\main\index.html:38
+msgid "Follow in social media"
+msgstr "תעקבו ברשתות החברתיות"
+
+#: .\main\templates\main\base.html:162
+msgid "NK jewelry&copy; "
+msgstr "NK jewelry&copy; "
+
+#: .\main\templates\main\base.html:163
+msgid "All rights reserved"
+msgstr "כל הזכויות שמורות"
+
+#: .\main\templates\main\index.html:35
 msgid "View my gallery"
-msgstr ""
+msgstr "צפו בגלריה שלי"
 
-#: .\nk\settings.py:120
-msgid "Russian"
+#: .\main\templates\main\index.html:120
+msgid "Gallery, here is my jewelry images!"
+msgstr "גלריה, הנה תמונות התכשיטים שלי!"
+
+#: .\main\templates\main\index.html:209
+msgid "Sorry, but here is no images available."
+msgstr "מצטערים, אבל כאן אין תמונות זמינות."
+
+#: .\main\views.py:19
+msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+msgstr "תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים"
+
+#: .\main\views.py:21
+msgid ""
+"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
 msgstr ""
+"תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+"תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+"תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים"
+
+#: .\main\views.py:25
+msgid "jewe"
+msgstr "תכשי"
+
+#: .\main\views.py:25
+msgid "lry"
+msgstr "טים"
+
+#: .\main\views.py:27
+msgid ""
+"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+"jewelry "
+msgstr ""
+"תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+"תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+"תכשיטיםתכשיט "
 
 #: .\nk\settings.py:121
-msgid "English"
-msgstr ""
+msgid "Russian"
+msgstr "רוּסִית"
 
 #: .\nk\settings.py:122
+msgid "English"
+msgstr "אנגלית"
+
+#: .\nk\settings.py:123
 msgid "Hebrew"
-msgstr ""
+msgstr "עִברִית"
+
+#~ msgid "Natalia karetniy"
+#~ msgstr "נטליה קרטני"
