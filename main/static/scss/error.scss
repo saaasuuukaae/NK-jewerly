@@ -1,0 +1,31 @@
+
+
+.error {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1b1b1b;
+  flex-direction: column;
+
+  h1 {
+    color: #fff;
+  }
+
+  p {
+    color: #E5FAF6;
+  }
+
+  p, pre, a {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+  }
+
+
+  a {
+    max-width: max-content;
+    color: blue;
+  }
+}

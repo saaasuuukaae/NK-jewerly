@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+
+{% block static %}
+
+{% endblock %}
+
+
+{% block main %}
+    <div class="error">
+
+        <h1>{{ message }}</h1>
+        <p>{% if exception != 'None' and exception %}{{ exception }}{% endif %}</p>
+        <p>{{ instruction }}</p>
+        <p>{% trans 'Back to website' %}</p>
+        <a href="{% url 'home' %}">{% trans 'Go home' %}</a>
+
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+
+        const header = document.querySelector('.header')
+        header.classList.add('nav-scrolled')
+
+        const footer = document.querySelector('.footer')
+        footer.remove()
+
+    </script>
+{% endblock %}

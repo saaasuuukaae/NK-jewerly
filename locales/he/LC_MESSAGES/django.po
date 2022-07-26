@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: .\main\views.py:26
+#: .\main\views.py:77
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-25 01:26+0300\n"
+"POT-Creation-Date: 2022-07-26 14:53+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,47 +110,91 @@ msgstr "תמונות גלריה"
 msgid "Visible"
 msgstr "גלוי"
 
-#: .\main\templates\main\base.html:28 .\main\views.py:50
+#: .\main\templates\main\base.html:33 .\main\views.py:101
 msgid "Natalia Karetniy"
 msgstr "נטליה קרטני"
 
-#: .\main\templates\main\base.html:33 .\main\views.py:24
+#: .\main\templates\main\base.html:38 .\main\views.py:75
 msgid "About me"
 msgstr "עליי"
 
-#: .\main\templates\main\base.html:39
+#: .\main\templates\main\base.html:44
 msgid "Gallery"
 msgstr "גלריה"
 
-#: .\main\templates\main\base.html:85 .\main\templates\main\index.html:38
+#: .\main\templates\main\base.html:90 .\main\templates\main\index.html:35
 msgid "Follow in social media"
 msgstr "תעקבו ברשתות החברתיות"
 
-#: .\main\templates\main\base.html:162
+#: .\main\templates\main\base.html:167
 msgid "NK jewelry&copy; "
 msgstr "NK jewelry&copy; "
 
-#: .\main\templates\main\base.html:163
+#: .\main\templates\main\base.html:168
 msgid "All rights reserved"
 msgstr "כל הזכויות שמורות"
 
-#: .\main\templates\main\index.html:35
+#: .\main\templates\main\error.html:18
+msgid "Back to website"
+msgstr "חזרה לאתר"
+
+#: .\main\templates\main\error.html:19
+msgid "Go home"
+msgstr "עבור לדף הבית"
+
+#: .\main\templates\main\index.html:32
 msgid "View my gallery"
 msgstr "צפו בגלריה שלי"
 
-#: .\main\templates\main\index.html:120
+#: .\main\templates\main\index.html:117
 msgid "Gallery, here is my jewelry images!"
 msgstr "גלריה, הנה תמונות התכשיטים שלי!"
 
-#: .\main\templates\main\index.html:209
+#: .\main\templates\main\index.html:206
 msgid "Sorry, but here is no images available."
 msgstr "מצטערים, אבל כאן אין תמונות זמינות."
 
-#: .\main\views.py:19
+#: .\main\views.py:14 .\main\views.py:15 .\main\views.py:24 .\main\views.py:25
+msgid "Bad request"
+msgstr "בקשה גרועה"
+
+#: .\main\views.py:17
+msgid "Go and do something..."
+msgstr "לך תעשה משהו..."
+
+#: .\main\views.py:27 .\main\views.py:47
+msgid "try another link"
+msgstr "נסה קישור אחר"
+
+#: .\main\views.py:34 .\main\views.py:35
+msgid "Permission denied"
+msgstr "ההרשאה נדחתה"
+
+#: .\main\views.py:37
+msgid "you are not allowed to access this page"
+msgstr "אינך מורשה לגשת לדף זה"
+
+#: .\main\views.py:44 .\main\views.py:45
+msgid "Page not found"
+msgstr "הדף לא נמצא"
+
+#: .\main\views.py:54
+msgid "Server error"
+msgstr "שגיאת שרת"
+
+#: .\main\views.py:55
+msgid "Server error occurred"
+msgstr "אירעה שגיאת שרת"
+
+#: .\main\views.py:57
+msgid "Please contact administrator"
+msgstr "אנא צור קשר עם מנהל המערכת"
+
+#: .\main\views.py:70
 msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
 msgstr "תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים"
 
-#: .\main\views.py:21
+#: .\main\views.py:72
 msgid ""
 "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
 "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
@@ -160,15 +204,15 @@ msgstr ""
 "תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
 "תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים"
 
-#: .\main\views.py:25
+#: .\main\views.py:76
 msgid "jewe"
 msgstr "תכשי"
 
-#: .\main\views.py:25
+#: .\main\views.py:76
 msgid "lry"
 msgstr "טים"
 
-#: .\main\views.py:27
+#: .\main\views.py:78
 msgid ""
 "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
 "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "

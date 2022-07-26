@@ -1,11 +1,62 @@
 from typing import Dict
 
+from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import ListView
 
 from main.models import GalleryImage, Design
 from main.utils import DataMixin
 
+
+# view to test excpetions
+def test_exception(request):
+	context = {
+		"page_title": _("Bad request"),
+		"message": _("Bad request"),
+		"exception": None,
+		"instruction": _("Go and do something...")
+	}
+	return render(request, "main/error.html", context)
+
+# Exception view for 400 error
+def bad_request(request, _exception):
+	context = {
+		"page_title": _("Bad request"),
+		"message": _("Bad request"),
+		"exception": str(_exception),
+		"instruction": _("try another link")
+	}
+	return render(request, "main/error.html", context)
+
+# exception view for 403 error
+def permission_denied(request, _exception):
+	context = {
+		"page_title": _("Permission denied"),
+		"message": _("Permission denied"),
+		"exception": str(_exception),
+		"instruction": _("you are not allowed to access this page")
+	}
+	return render(request, "main/error.html", context)
+
+# exception view for 404 error
+def page_not_found(request, _exception):
+	context = {
+		"page_title": _("Page not found"),
+		"message": _("Page not found"),
+		"exception": str(_exception),
+		"instruction": _("try another link")
+	}
+	return render(request, "main/error.html", context)
+
+# exception view for 500 error
+def server_error(request, _exception=None):
+	context = {
+		"page_title": _("Server error"),
+		"message": _("Server error occurred"),
+		"exception": str(_exception),
+		"instruction": _("Please contact administrator")
+	}
+	return render(request, "main/error.html", context)
 
 
 class IndexView(DataMixin, ListView):
