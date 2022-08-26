@@ -18,6 +18,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+import debug_toolbar
 
 handler400 = 'main.views.bad_request'
 handler403 = 'main.views.permission_denied'
@@ -28,9 +29,12 @@ urlpatterns = [
 	              path('admin/', admin.site.urls),
               ] + i18n_patterns(
 	path('i18n/', include('django.conf.urls.i18n')),
-	path('', include("main.urls"))
+	path('', include("main.urls")),
+
 )
+
+if settings.DEBUG:
+	urlpatterns.append(path("__debug__/", include(debug_toolbar.urls)))
 
 # @TODO REMOVE THIS LINE AFTER DEBUGGING
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
