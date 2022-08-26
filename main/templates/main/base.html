@@ -258,6 +258,12 @@
         } else {
             cookies_popup.classList.add('hide');
             accept_button.removeEventListener('click', acceptCookies);
+            cookies_popup.addEventListener('transitionend', function () {
+                cookies_popup.style.display = 'none';
+                cookies_popup.removeEventListener('transitionend', function () {
+                });
+            });
+
         }
     }
 

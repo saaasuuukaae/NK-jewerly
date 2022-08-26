@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 22:07+0300\n"
+"POT-Creation-Date: 2022-08-26 22:52+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,13 +110,13 @@ msgstr "Изображения галереи"
 msgid "Visible"
 msgstr "Отображение"
 
-#: .\main\templates\main\base.html:49 .\main\views.py:101
+#: .\main\templates\main\base.html:49 .\main\views.py:106
 #, fuzzy
 #| msgid "Nataliya Karetniy"
 msgid "Natalia Karetniy"
 msgstr "Наталья Каретный"
 
-#: .\main\templates\main\base.html:56 .\main\views.py:75
+#: .\main\templates\main\base.html:56 .\main\views.py:79
 msgid "About me"
 msgstr "Про меня"
 
@@ -146,7 +146,9 @@ msgstr "Мы используем cookies"
 msgid ""
 "Cookies help us deliver the best experience on our website. By using our "
 "website, you agree to the use of cookies."
-msgstr "Они помогают нам осуществлять лучший пользовательский опыт на нашем сайте. Используя наш сайт, вы соглашаетесь на использование cookies."
+msgstr ""
+"Они помогают нам осуществлять лучший пользовательский опыт на нашем сайте. "
+"Используя наш сайт, вы соглашаетесь на использование cookies."
 
 #: .\main\templates\main\error.html:18
 msgid "Back to website"
@@ -168,7 +170,7 @@ msgstr "Галерея, здесь мои изображения с украше
 msgid "Sorry, but here is no images available."
 msgstr "Приносим извинения, но изображений тут нет."
 
-#: .\main\views.py:14 .\main\views.py:15 .\main\views.py:24 .\main\views.py:25
+#: .\main\views.py:14 .\main\views.py:15 .\main\views.py:25 .\main\views.py:26
 msgid "Bad request"
 msgstr "Ошибка запроса"
 
@@ -176,80 +178,45 @@ msgstr "Ошибка запроса"
 msgid "Go and do something..."
 msgstr "Иди сделай что-то"
 
-#: .\main\views.py:27 .\main\views.py:47
+#: .\main\views.py:28 .\main\views.py:50
 msgid "try another link"
 msgstr "Попробуйте другой URL адрес"
 
-#: .\main\views.py:34 .\main\views.py:35
+#: .\main\views.py:36 .\main\views.py:37
 msgid "Permission denied"
 msgstr "Доступ запрещен"
 
-#: .\main\views.py:37
+#: .\main\views.py:39
 msgid "you are not allowed to access this page"
 msgstr "У вас нет прав для доступа к этой странице"
 
-#: .\main\views.py:44 .\main\views.py:45
+#: .\main\views.py:47 .\main\views.py:48
 msgid "Page not found"
 msgstr "Страница не найдена"
 
-#: .\main\views.py:54
+#: .\main\views.py:58
 msgid "Server error"
 msgstr "Ошибка сервера"
 
-#: .\main\views.py:55
+#: .\main\views.py:59
 msgid "Server error occurred"
 msgstr "Произошла ошибка сервера"
 
-#: .\main\views.py:57
+#: .\main\views.py:61
 msgid "Please contact administrator"
 msgstr "Свяжитесь с администратором"
 
-#: .\main\views.py:70
-#, fuzzy
-#| msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-msgid "jewelry jewelry jewelry jewelry jewelry  "
-msgstr ""
-"Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
-"Украшения "
+#: .\main\views.py:74 .\main\views.py:76 .\main\views.py:81 .\main\views.py:83
+msgid "__text__"
+msgstr "__text__"
 
-#: .\main\views.py:72
-#, fuzzy
-#| msgid ""
-#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-msgid ""
-" jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry jewelry jewelry jewelry jewelry jewelry "
-msgstr ""
-"Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
-"Украшения Украшения Украшения"
-
-#: .\main\views.py:76
+#: .\main\views.py:80
 msgid "jewe"
 msgstr "Украш"
 
-#: .\main\views.py:76
+#: .\main\views.py:80
 msgid "lry"
 msgstr "ения"
-
-#: .\main\views.py:77
-msgid "__text__"
-msgstr ""
-
-#: .\main\views.py:78
-#, fuzzy
-#| msgid ""
-#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-msgid ""
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry "
-msgstr ""
-"Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
-"Украшения Украшения Украшения"
 
 #: .\nk\settings.py:130
 msgid "Russian"
@@ -272,6 +239,38 @@ msgstr ""
 #| msgid "Please contact administrator"
 msgid "Django administration"
 msgstr "Свяжитесь с администратором"
+
+#, fuzzy
+#~| msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ msgid "jewelry jewelry jewelry jewelry jewelry  "
+#~ msgstr ""
+#~ "Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
+#~ "Украшения "
+
+#, fuzzy
+#~| msgid ""
+#~| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ msgid ""
+#~ " jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ msgstr ""
+#~ "Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
+#~ "Украшения Украшения Украшения"
+
+#, fuzzy
+#~| msgid ""
+#~| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ msgid ""
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry "
+#~ msgstr ""
+#~ "Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
+#~ "Украшения Украшения Украшения"
 
 #~ msgid ""
 #~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "

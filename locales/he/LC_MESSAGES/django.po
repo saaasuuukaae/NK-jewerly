@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 22:07+0300\n"
+"POT-Creation-Date: 2022-08-26 22:52+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,11 +109,11 @@ msgstr "תמונות גלריה"
 msgid "Visible"
 msgstr "גלוי"
 
-#: .\main\templates\main\base.html:49 .\main\views.py:101
+#: .\main\templates\main\base.html:49 .\main\views.py:106
 msgid "Natalia Karetniy"
 msgstr "נטליה קרטני"
 
-#: .\main\templates\main\base.html:56 .\main\views.py:75
+#: .\main\templates\main\base.html:56 .\main\views.py:79
 msgid "About me"
 msgstr "עליי"
 
@@ -142,8 +142,8 @@ msgid ""
 "Cookies help us deliver the best experience on our website. By using our "
 "website, you agree to the use of cookies."
 msgstr ""
-"קוקיס עוזרות לנו לספק את החוויה הטובה ביותר באתר שלנו. באמצעות "
-"אתר, אתה מסכים לשימוש קוקיס."
+"קוקיס עוזרות לנו לספק את החוויה הטובה ביותר באתר שלנו. באמצעות אתר, אתה "
+"מסכים לשימוש קוקיס."
 
 #: .\main\templates\main\error.html:18
 msgid "Back to website"
@@ -165,7 +165,7 @@ msgstr "גלריה, הנה תמונות התכשיטים שלי!"
 msgid "Sorry, but here is no images available."
 msgstr "מצטערים, אבל כאן אין תמונות זמינות."
 
-#: .\main\views.py:14 .\main\views.py:15 .\main\views.py:24 .\main\views.py:25
+#: .\main\views.py:14 .\main\views.py:15 .\main\views.py:25 .\main\views.py:26
 msgid "Bad request"
 msgstr "בקשה גרועה"
 
@@ -173,75 +173,45 @@ msgstr "בקשה גרועה"
 msgid "Go and do something..."
 msgstr "לך תעשה משהו..."
 
-#: .\main\views.py:27 .\main\views.py:47
+#: .\main\views.py:28 .\main\views.py:50
 msgid "try another link"
 msgstr "נסה קישור אחר"
 
-#: .\main\views.py:34 .\main\views.py:35
+#: .\main\views.py:36 .\main\views.py:37
 msgid "Permission denied"
 msgstr "ההרשאה נדחתה"
 
-#: .\main\views.py:37
+#: .\main\views.py:39
 msgid "you are not allowed to access this page"
 msgstr "אינך מורשה לגשת לדף זה"
 
-#: .\main\views.py:44 .\main\views.py:45
+#: .\main\views.py:47 .\main\views.py:48
 msgid "Page not found"
 msgstr "הדף לא נמצא"
 
-#: .\main\views.py:54
+#: .\main\views.py:58
 msgid "Server error"
 msgstr "שגיאת שרת"
 
-#: .\main\views.py:55
+#: .\main\views.py:59
 msgid "Server error occurred"
 msgstr "אירעה שגיאת שרת"
 
-#: .\main\views.py:57
+#: .\main\views.py:61
 msgid "Please contact administrator"
 msgstr "אנא צור קשר עם מנהל המערכת"
 
-#: .\main\views.py:70
-#, fuzzy
-#| msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-msgid "jewelry jewelry jewelry jewelry jewelry  "
-msgstr "תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים"
+#: .\main\views.py:74 .\main\views.py:76 .\main\views.py:81 .\main\views.py:83
+msgid "__text__"
+msgstr "__text__"
 
-#: .\main\views.py:72
-#, fuzzy
-#| msgid ""
-#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-#| "jewelry "
-msgid ""
-" jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry jewelry jewelry jewelry jewelry jewelry "
-msgstr ""
-"תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
-"תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
-"תכשיטיםתכשיט "
-
-#: .\main\views.py:76
+#: .\main\views.py:80
 msgid "jewe"
 msgstr "תכשי"
 
-#: .\main\views.py:76
+#: .\main\views.py:80
 msgid "lry"
 msgstr "טים"
-
-#: .\main\views.py:77
-msgid "__text__"
-msgstr ""
-
-#: .\main\views.py:78
-msgid ""
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry "
-msgstr ""
-"תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
-"תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
-"תכשיטיםתכשיט "
 
 #: .\nk\settings.py:130
 msgid "Russian"
@@ -264,6 +234,33 @@ msgstr ""
 #| msgid "Please contact administrator"
 msgid "Django administration"
 msgstr "אנא צור קשר עם מנהל המערכת"
+
+#, fuzzy
+#~| msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ msgid "jewelry jewelry jewelry jewelry jewelry  "
+#~ msgstr "תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים"
+
+#, fuzzy
+#~| msgid ""
+#~| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~| "jewelry "
+#~ msgid ""
+#~ " jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ msgstr ""
+#~ "תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+#~ "תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+#~ "תכשיטיםתכשיט "
+
+#~ msgid ""
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry "
+#~ msgstr ""
+#~ "תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+#~ "תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+#~ "תכשיטיםתכשיט "
 
 #~ msgid ""
 #~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "

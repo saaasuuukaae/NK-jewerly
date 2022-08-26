@@ -71,19 +71,16 @@ class IndexView(DataMixin, ListView):
 
 	@property
 	def default_design(self) -> Dict:
-		title = _("jewelry jewelry jewelry jewelry jewelry  ")
+		title = _("__text__")
 		subtitle = _(
-			" jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-			"jewelry jewelry jewelry jewelry jewelry jewelry jewelry ")
+			"__text__")
 		background = {'url': "/static/img/bg/04.jpg"}
 		about_picture = {'url': "/static/img/about/01.jpg"}
 		about_title = _("About me")
 		about_subtitle = [_('jewe'), _('lry')]  # NOQA
 		about_text = _("__text__")
 		footer_text = _(
-			"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-			"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-			"jewelry jewelry jewelry ")
+			"__text__")
 
 		return {
 			"title": title,
