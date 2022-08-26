@@ -18,7 +18,6 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-import debug_toolbar
 
 handler400 = 'main.views.bad_request'
 handler403 = 'main.views.permission_denied'

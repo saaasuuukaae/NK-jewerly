@@ -10,7 +10,6 @@ urlpatterns = [
 	path('home', cache_page(60)(IndexView.as_view())),
 	path('base', cache_page(60)(IndexView.as_view())),
 
-
 ]
 
 # if debug add debug urls
