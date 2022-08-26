@@ -74,7 +74,7 @@ class IndexView(DataMixin, ListView):
 		about_picture = {'url': "/static/img/about/01.jpg"}
 		about_title = _("About me")
 		about_subtitle = [_('jewe'), _('lry')]  # NOQA
-		about_text = _("")
+		about_text = _("__text__")
 		footer_text = _("jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry ")
 
 		return {

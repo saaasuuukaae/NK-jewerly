@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: .\main\views.py:77
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-26 14:53+0300\n"
+"POT-Creation-Date: 2022-08-26 22:07+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +20,7 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\main\admin.py:30
+#: .\main\admin.py:34
 msgid "Image"
 msgstr "Изображение"
 
@@ -111,33 +110,43 @@ msgstr "Изображения галереи"
 msgid "Visible"
 msgstr "Отображение"
 
-#: .\main\templates\main\base.html:33 .\main\views.py:101
+#: .\main\templates\main\base.html:49 .\main\views.py:101
 #, fuzzy
 #| msgid "Nataliya Karetniy"
 msgid "Natalia Karetniy"
 msgstr "Наталья Каретный"
 
-#: .\main\templates\main\base.html:38 .\main\views.py:75
+#: .\main\templates\main\base.html:56 .\main\views.py:75
 msgid "About me"
 msgstr "Про меня"
 
-#: .\main\templates\main\base.html:44
+#: .\main\templates\main\base.html:64
 msgid "Gallery"
 msgstr "Галерея"
 
-#: .\main\templates\main\base.html:90 .\main\templates\main\index.html:35
+#: .\main\templates\main\base.html:111 .\main\templates\main\index.html:35
 msgid "Follow in social media"
 msgstr "Следите в соц-сетях"
 
-#: .\main\templates\main\base.html:167
+#: .\main\templates\main\base.html:207
 #, fuzzy
 #| msgid "NK jewerly&copy; "
 msgid "NK jewelry&copy; "
 msgstr "NK jewelry&copy; "
 
-#: .\main\templates\main\base.html:168
+#: .\main\templates\main\base.html:208
 msgid "All rights reserved"
 msgstr "Все права защищены"
+
+#: .\main\templates\main\base.html:220
+msgid "We use cookies"
+msgstr "Мы используем cookies"
+
+#: .\main\templates\main\base.html:221
+msgid ""
+"Cookies help us deliver the best experience on our website. By using our "
+"website, you agree to the use of cookies."
+msgstr "Они помогают нам осуществлять лучший пользовательский опыт на нашем сайте. Используя наш сайт, вы соглашаетесь на использование cookies."
 
 #: .\main\templates\main\error.html:18
 msgid "Back to website"
@@ -196,21 +205,25 @@ msgid "Please contact administrator"
 msgstr "Свяжитесь с администратором"
 
 #: .\main\views.py:70
-msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#, fuzzy
+#| msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+msgid "jewelry jewelry jewelry jewelry jewelry  "
 msgstr ""
 "Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
 "Украшения "
 
 #: .\main\views.py:72
+#, fuzzy
+#| msgid ""
+#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
 msgid ""
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+" jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+"jewelry jewelry jewelry jewelry jewelry jewelry "
 msgstr ""
 "Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
-"Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
-"Украшения Украшения Украшения Украшения УкрашенияУкрашения Украшения "
-"Украшения Украшения Украшения Украшения Украшения Украшения"
+"Украшения Украшения Украшения"
 
 #: .\main\views.py:76
 msgid "jewe"
@@ -219,6 +232,10 @@ msgstr "Украш"
 #: .\main\views.py:76
 msgid "lry"
 msgstr "ения"
+
+#: .\main\views.py:77
+msgid "__text__"
+msgstr ""
 
 #: .\main\views.py:78
 #, fuzzy
@@ -234,17 +251,37 @@ msgstr ""
 "Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
 "Украшения Украшения Украшения"
 
-#: .\nk\settings.py:121
+#: .\nk\settings.py:130
 msgid "Russian"
 msgstr "Русский"
 
-#: .\nk\settings.py:122
+#: .\nk\settings.py:131
 msgid "English"
 msgstr "Английский"
 
-#: .\nk\settings.py:123
+#: .\nk\settings.py:132
 msgid "Hebrew"
 msgstr "Иврит"
+
+#: .\templates\admin\base_site.html:5
+msgid "Django site admin"
+msgstr ""
+
+#: .\templates\admin\base_site.html:9
+#, fuzzy
+#| msgid "Please contact administrator"
+msgid "Django administration"
+msgstr "Свяжитесь с администратором"
+
+#~ msgid ""
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ msgstr ""
+#~ "Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
+#~ "Украшения Украшения Украшения Украшения Украшения Украшения Украшения "
+#~ "Украшения Украшения Украшения Украшения УкрашенияУкрашения Украшения "
+#~ "Украшения Украшения Украшения Украшения Украшения Украшения"
 
 #~ msgid "Natalia karetniy"
 #~ msgstr "Наталья каретный"

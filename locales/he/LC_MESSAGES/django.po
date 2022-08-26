@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: .\main\views.py:77
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-26 14:53+0300\n"
+"POT-Creation-Date: 2022-08-26 22:07+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
 "1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: .\main\admin.py:30
+#: .\main\admin.py:34
 msgid "Image"
 msgstr "תמונה"
 
@@ -110,29 +109,41 @@ msgstr "תמונות גלריה"
 msgid "Visible"
 msgstr "גלוי"
 
-#: .\main\templates\main\base.html:33 .\main\views.py:101
+#: .\main\templates\main\base.html:49 .\main\views.py:101
 msgid "Natalia Karetniy"
 msgstr "נטליה קרטני"
 
-#: .\main\templates\main\base.html:38 .\main\views.py:75
+#: .\main\templates\main\base.html:56 .\main\views.py:75
 msgid "About me"
 msgstr "עליי"
 
-#: .\main\templates\main\base.html:44
+#: .\main\templates\main\base.html:64
 msgid "Gallery"
 msgstr "גלריה"
 
-#: .\main\templates\main\base.html:90 .\main\templates\main\index.html:35
+#: .\main\templates\main\base.html:111 .\main\templates\main\index.html:35
 msgid "Follow in social media"
 msgstr "תעקבו ברשתות החברתיות"
 
-#: .\main\templates\main\base.html:167
+#: .\main\templates\main\base.html:207
 msgid "NK jewelry&copy; "
 msgstr "NK jewelry&copy; "
 
-#: .\main\templates\main\base.html:168
+#: .\main\templates\main\base.html:208
 msgid "All rights reserved"
 msgstr "כל הזכויות שמורות"
+
+#: .\main\templates\main\base.html:220
+msgid "We use cookies"
+msgstr "אנו משתמשים בקוקיס"
+
+#: .\main\templates\main\base.html:221
+msgid ""
+"Cookies help us deliver the best experience on our website. By using our "
+"website, you agree to the use of cookies."
+msgstr ""
+"קוקיס עוזרות לנו לספק את החוויה הטובה ביותר באתר שלנו. באמצעות "
+"אתר, אתה מסכים לשימוש קוקיס."
 
 #: .\main\templates\main\error.html:18
 msgid "Back to website"
@@ -191,18 +202,24 @@ msgid "Please contact administrator"
 msgstr "אנא צור קשר עם מנהל המערכת"
 
 #: .\main\views.py:70
-msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#, fuzzy
+#| msgid "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+msgid "jewelry jewelry jewelry jewelry jewelry  "
 msgstr "תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים"
 
 #: .\main\views.py:72
+#, fuzzy
+#| msgid ""
+#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#| "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#| "jewelry "
 msgid ""
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
-"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+" jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+"jewelry jewelry jewelry jewelry jewelry jewelry "
 msgstr ""
 "תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
 "תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
-"תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים"
+"תכשיטיםתכשיט "
 
 #: .\main\views.py:76
 msgid "jewe"
@@ -211,6 +228,10 @@ msgstr "תכשי"
 #: .\main\views.py:76
 msgid "lry"
 msgstr "טים"
+
+#: .\main\views.py:77
+msgid "__text__"
+msgstr ""
 
 #: .\main\views.py:78
 msgid ""
@@ -222,17 +243,36 @@ msgstr ""
 "תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
 "תכשיטיםתכשיט "
 
-#: .\nk\settings.py:121
+#: .\nk\settings.py:130
 msgid "Russian"
 msgstr "רוּסִית"
 
-#: .\nk\settings.py:122
+#: .\nk\settings.py:131
 msgid "English"
 msgstr "אנגלית"
 
-#: .\nk\settings.py:123
+#: .\nk\settings.py:132
 msgid "Hebrew"
 msgstr "עִברִית"
+
+#: .\templates\admin\base_site.html:5
+msgid "Django site admin"
+msgstr ""
+
+#: .\templates\admin\base_site.html:9
+#, fuzzy
+#| msgid "Please contact administrator"
+msgid "Django administration"
+msgstr "אנא צור קשר עם מנהל המערכת"
+
+#~ msgid ""
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ "jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+#~ msgstr ""
+#~ "תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+#~ "תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים "
+#~ "תכשיטיםתכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים תכשיטים"
 
 #~ msgid "Natalia karetniy"
 #~ msgstr "נטליה קרטני"
