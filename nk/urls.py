@@ -17,6 +17,7 @@ from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import path, include
 
 handler400 = 'main.views.bad_request'
@@ -24,8 +25,14 @@ handler403 = 'main.views.permission_denied'
 handler404 = 'main.views.page_not_found'
 handler500 = 'main.views.server_error'
 
+
+def x(request):
+	return redirect('/en/')
+
+
 urlpatterns = [
 	              path('admin/', admin.site.urls),
+	              path('', x, name='x'),
               ] + i18n_patterns(
 	path('i18n/', include('django.conf.urls.i18n')),
 	path('', include("main.urls")),

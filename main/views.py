@@ -1,7 +1,9 @@
+import sys
 from typing import Dict
 
 from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
+from django.views.debug import technical_500_response, technical_404_response
 from django.views.generic import ListView
 
 from main.models import GalleryImage, Design
@@ -21,8 +23,10 @@ def test_exception(request):
 
 # Exception view for 400 error
 def bad_request(request, _exception):
+	if request.user.is_superuser:
+		return technical_500_response(request, *sys.exc_info())
+
 	context = {
-		"page_title": _("Bad request"),
 		"message": _("Bad request"),
 		"exception": str(_exception),
 		"instruction": _("try another link")
@@ -31,9 +35,12 @@ def bad_request(request, _exception):
 
 
 # exception view for 403 error
+
+
 def permission_denied(request, _exception):
+	if request.user.is_superuser:
+		return technical_500_response(request, *sys.exc_info())
 	context = {
-		"page_title": _("Permission denied"),
 		"message": _("Permission denied"),
 		"exception": str(_exception),
 		"instruction": _("you are not allowed to access this page")
@@ -43,8 +50,9 @@ def permission_denied(request, _exception):
 
 # exception view for 404 error
 def page_not_found(request, _exception):
+	if request.user.is_superuser:
+		return technical_404_response(request, *sys.exc_info())
 	context = {
-		"page_title": _("Page not found"),
 		"message": _("Page not found"),
 		"exception": str(_exception),
 		"instruction": _("try another link")
@@ -54,8 +62,9 @@ def page_not_found(request, _exception):
 
 # exception view for 500 error
 def server_error(request, _exception=None):
+	if request.user.is_superuser:
+		return technical_500_response(request, *sys.exc_info())
 	context = {
-		"page_title": _("Server error"),
 		"message": _("Server error occurred"),
 		"exception": str(_exception),
 		"instruction": _("Please contact administrator")
