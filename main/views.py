@@ -18,6 +18,7 @@ def test_exception(request):
 	}
 	return render(request, "main/error.html", context)
 
+
 # Exception view for 400 error
 def bad_request(request, _exception):
 	context = {
@@ -27,6 +28,7 @@ def bad_request(request, _exception):
 		"instruction": _("try another link")
 	}
 	return render(request, "main/error.html", context)
+
 
 # exception view for 403 error
 def permission_denied(request, _exception):
@@ -38,6 +40,7 @@ def permission_denied(request, _exception):
 	}
 	return render(request, "main/error.html", context)
 
+
 # exception view for 404 error
 def page_not_found(request, _exception):
 	context = {
@@ -47,6 +50,7 @@ def page_not_found(request, _exception):
 		"instruction": _("try another link")
 	}
 	return render(request, "main/error.html", context)
+
 
 # exception view for 500 error
 def server_error(request, _exception=None):
@@ -69,13 +73,17 @@ class IndexView(DataMixin, ListView):
 	def default_design(self) -> Dict:
 		title = _("jewelry jewelry jewelry jewelry jewelry  ")
 		subtitle = _(
-			" jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry ")
+			" jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+			"jewelry jewelry jewelry jewelry jewelry jewelry jewelry ")
 		background = {'url': "/static/img/bg/04.jpg"}
 		about_picture = {'url': "/static/img/about/01.jpg"}
 		about_title = _("About me")
 		about_subtitle = [_('jewe'), _('lry')]  # NOQA
 		about_text = _("__text__")
-		footer_text = _("jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry ")
+		footer_text = _(
+			"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+			"jewelry jewelry jewelry jewelry jewelry jewelry jewelry jewelry "
+			"jewelry jewelry jewelry ")
 
 		return {
 			"title": title,
@@ -102,9 +110,9 @@ class IndexView(DataMixin, ListView):
 			design=self.get_design()
 		)
 
-		context = dict(list(raw_context.items()) + list(additional_context.items()))
+		context = dict(
+			list(raw_context.items()) + list(additional_context.items()))
 		return context
 
 	def get_queryset(self):
 		return self.model.objects.filter(show=True).order_by('pk')
-

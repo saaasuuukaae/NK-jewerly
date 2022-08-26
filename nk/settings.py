@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-(' \
              '!1zx2xy9dub=#yzmz9kx@*3djg)m32#vzn4&t*^1p4w^ua-vd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # type: bool
+DEBUG = False  # type: bool
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["jewelrynk.net", "www.jewelrynk.net", 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
 	'django.contrib.sessions',
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
-	'debug_toolbar',
+	# 'debug_toolbar',
 	'main.apps.MainConfig',
 ]
 
@@ -50,7 +50,7 @@ MIDDLEWARE = [
 	'django.middleware.locale.LocaleMiddleware',
 	'django.middleware.common.CommonMiddleware',
 	'django.middleware.csrf.CsrfViewMiddleware',
-	'debug_toolbar.middleware.DebugToolbarMiddleware',
+	# 'debug_toolbar.middleware.DebugToolbarMiddleware',
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -166,6 +166,6 @@ CACHE_MIDDLEWARE_KEY_PREFIX = ''
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-INTERNAL_IPS = [
-	'127.0.0.1',
-]
+# INTERNAL_IPS = [
+# '127.0.0.1',
+# ]
