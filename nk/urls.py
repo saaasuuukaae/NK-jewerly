@@ -25,14 +25,8 @@ handler403 = 'main.views.permission_denied'
 handler404 = 'main.views.page_not_found'
 handler500 = 'main.views.server_error'
 
-
-def x(request):
-	return redirect('/en/')
-
-
 urlpatterns = [
 	              path('admin/', admin.site.urls),
-	              path('', x, name='x'),
               ] + i18n_patterns(
 	path('i18n/', include('django.conf.urls.i18n')),
 	path('', include("main.urls")),
