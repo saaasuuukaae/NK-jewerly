@@ -22,13 +22,13 @@ def test_exception(request):
 
 
 # Exception view for 400 error
-def bad_request(request, _exception):
+def bad_request(request, exception):
 	if request.user.is_superuser:
 		return technical_500_response(request, *sys.exc_info())
 
 	context = {
 		"message": _("Bad request"),
-		"exception": str(_exception),
+		"exception": str(exception),
 		"instruction": _("try another link")
 	}
 	return render(request, "main/error.html", context)
@@ -37,36 +37,36 @@ def bad_request(request, _exception):
 # exception view for 403 error
 
 
-def permission_denied(request, _exception):
+def permission_denied(request, exception):
 	if request.user.is_superuser:
 		return technical_500_response(request, *sys.exc_info())
 	context = {
 		"message": _("Permission denied"),
-		"exception": str(_exception),
+		"exception": str(exception),
 		"instruction": _("you are not allowed to access this page")
 	}
 	return render(request, "main/error.html", context)
 
 
 # exception view for 404 error
-def page_not_found(request, _exception):
+def page_not_found(request, exception):
 	if request.user.is_superuser:
 		return technical_404_response(request, *sys.exc_info())
 	context = {
 		"message": _("Page not found"),
-		"exception": str(_exception),
+		"exception": str(exception),
 		"instruction": _("try another link")
 	}
 	return render(request, "main/error.html", context)
 
 
 # exception view for 500 error
-def server_error(request, _exception=None):
+def server_error(request, exception=None):
 	if request.user.is_superuser:
 		return technical_500_response(request, *sys.exc_info())
 	context = {
 		"message": _("Server error occurred"),
-		"exception": str(_exception),
+		"exception": str(exception),
 		"instruction": _("Please contact administrator")
 	}
 	return render(request, "main/error.html", context)
