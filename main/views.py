@@ -51,7 +51,7 @@ def permission_denied(request, exception):
 # exception view for 404 error
 def page_not_found(request, exception):
 	if request.user.is_superuser:
-		return technical_404_response(request, *sys.exc_info())
+		return technical_404_response(request, exception)
 	context = {
 		"message": _("Page not found"),
 		"exception": str(exception),
