@@ -1,6 +1,7 @@
 import sys
 from typing import Dict
 
+from django.core.handlers.wsgi import WSGIRequest
 from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
 from django.views.debug import technical_500_response, technical_404_response
@@ -11,7 +12,7 @@ from main.utils import DataMixin
 
 
 # view to test excpetions
-def test_exception(request):
+def test_exception(request: WSGIRequest):
 	context = {
 		"page_title": _("Bad request"),
 		"message": _("Bad request"),
@@ -22,7 +23,7 @@ def test_exception(request):
 
 
 # Exception view for 400 error
-def bad_request(request, exception):
+def bad_request(request: WSGIRequest, exception):
 	if request.user.is_superuser:
 		return technical_500_response(request, *sys.exc_info())
 
@@ -62,14 +63,23 @@ def page_not_found(request, exception):
 
 # exception view for 500 error
 def server_error(request, exception=None):
-	if request.user.is_superuser:
-		return technical_500_response(request, *sys.exc_info())
-	context = {
-		"message": _("Server error occurred"),
-		"exception": str(exception),
-		"instruction": _("Please contact administrator")
-	}
-	return render(request, "main/error.html", context)
+	try:
+		if request.user.is_superuser:
+			return technical_500_response(request, *sys.exc_info())
+		else:
+			context = {
+				"message": _("Server error occurred"),
+				"exception": str(exception),
+				"instruction": _("Please contact administrator")
+			}
+			return render(request, "main/error.html", context)
+	except:  # NOQA
+		context = {
+			"message": _("Server error occurred"),
+			"exception": str(exception),
+			"instruction": _("Please contact administrator")
+		}
+		return render(request, "main/error.html", context)
 
 
 class IndexView(DataMixin, ListView):
